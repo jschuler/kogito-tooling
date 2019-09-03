@@ -19,6 +19,13 @@ import * as AppFormer from "appformer-js-core";
 import * as MicroEditorEnvelope from "appformer-js-microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "appformer-js-microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
+import { Alert, Bullseye } from "@patternfly/react-core";
+import { RulesTable } from './RulesTable';
+// @ts-ignore
+import { EditableRulesTable } from './EditableRulesTable';
+
+const rulesSchema = require('../../generated/rules').rules;
+console.log(rulesSchema);
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -46,6 +53,7 @@ class ReactReadonlyAppFormerEditor extends AppFormer.Editor {
   }
 
   public getContent(): Promise<string> {
+    console.info(this.self.getContent());
     return this.self.getContent();
   }
 
@@ -110,11 +118,18 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
 
   public render() {
     return (
-      <textarea
+      <>
+      {/* <Alert title="Main area" className="pf-u-m-lg" /> */}
+      <div className="pf-u-display-flex pf-u-justify-content-center pf-u-m-lg">
+        {/* <Editor className="pf-u-m-lg" /> */}
+        <EditableRulesTable />
+      </div>
+      {/* <textarea
         style={{ width: "100%", height: "100%" }}
         value={this.state.content}
         onInput={(e: any) => this.updateContent(e.target.value)}
-      />
+      /> */}
+      </>
     );
   }
 }
