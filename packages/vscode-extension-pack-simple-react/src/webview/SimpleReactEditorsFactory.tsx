@@ -19,13 +19,12 @@ import * as AppFormer from "appformer-js-core";
 import * as MicroEditorEnvelope from "appformer-js-microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "appformer-js-microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
-import { Alert, Bullseye } from "@patternfly/react-core";
-import { RulesTable } from './RulesTable';
 // @ts-ignore
-import { EditableRulesTable } from './EditableRulesTable';
-
-const rulesSchema = require('../../generated/rules').rules;
-console.log(rulesSchema);
+import ScenarioContainer from './ScenarioContainer';
+// @ts-ignore
+import { CssGrid } from 'sce-sim-grid';
+import 'sce-sim-grid/src/components/Grid/CssGrid.css';
+import { getJsonFromSceSim } from './util';
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -78,6 +77,7 @@ interface Props {
 interface State {
   content: string;
   originalContent: string;
+  myContent: string;
 }
 
 class ReactReadonlyEditor extends React.Component<Props, State> {
@@ -86,7 +86,8 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     props.exposing(this);
     this.state = {
       originalContent: "",
-      content: ""
+      content: "",
+      myContent: getJsonFromSceSim()
     };
   }
 
@@ -117,13 +118,13 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   public render() {
+    const { myContent } = this.state;
     return (
       <>
-      {/* <Alert title="Main area" className="pf-u-m-lg" /> */}
-      <div className="pf-u-display-flex pf-u-justify-content-center pf-u-m-lg">
-        {/* <Editor className="pf-u-m-lg" /> */}
-        <EditableRulesTable />
-      </div>
+      <div className="pf-u-m-xl"><h1>PatternFly table</h1></div>
+      <ScenarioContainer />
+      <div className="pf-u-m-xl"><h1>(Interim) table</h1></div>
+      {myContent ? <CssGrid data={myContent} /> : <div>Loading</div>}
       {/* <textarea
         style={{ width: "100%", height: "100%" }}
         value={this.state.content}

@@ -1,0 +1,14 @@
+@import "~ag-grid-community/dist/styles/ag-theme-balham";
+@import "~ag-grid-community/dist/styles/ag-theme-balham-dark";
+
+// Toggle dark theme
+:not(.vscode-dark) {
+  .kogito-tooling--agGrid {
+    @extend .ag-theme-balham;
+  }
+}
+.vscode-dark {
+  .kogito-tooling--agGrid {
+    @extend .ag-theme-balham-dark;
+  }
+}

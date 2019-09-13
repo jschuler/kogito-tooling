@@ -1,0 +1,65 @@
+.kie-grid {
+  --num-given-columns: 4;
+  --num-expect-columns: 3;
+  display: grid;
+
+  grid-template-columns: [grid-start number-start] minmax(2em, auto) [number-end description-start] minmax(
+      auto,
+      2fr
+    ) [description-end given-start] repeat(
+      var(--num-given-columns),
+      minmax(auto, 1fr)
+    ) [given-end expect-start] repeat(var(--num-expect-columns), 1fr) [expect-end grid-end];
+
+  grid-template-rows: [grid-row-start grid-row-header-start] 1fr [grid-row-instances-start] 1fr [grid-row-properties-start] 1fr [grid-row-header-end grid-row-data-start] 1fr 1fr [grid-row-data-end grid-row-end];
+}
+
+.kie-grid__item {
+  border: 1px solid var(--pf-global--BorderColor--100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kie-grid__number {
+  grid-column: number-start / number-end;
+  grid-row: grid-row-header-start / grid-row-header-end;
+}
+.kie-grid__description {
+  grid-column: description-start / description-end;
+  grid-row: grid-row-header-start / grid-row-header-end;
+}
+.kie-grid__given {
+  grid-column: given-start / given-end;
+  grid-row: grid-row-header-start;
+}
+.kie-grid__expect {
+  grid-column: expect-start / expect-end;
+  grid-row: grid-row-header-start;
+}
+
+.kie-grid__header--given * {
+  background-color: #def3ff;
+  padding: var(--pf-global--spacer--sm);
+  text-align: center;
+}
+.kie-grid__header--expect * {
+  background-color: #bee1f4;
+  padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
+  text-align: center;
+}
+.kie-grid__rule,
+.kie-grid__header--given,
+.kie-grid__header--expect {
+  display: contents;
+}
+
+input[type="text"] {
+  height: 100%;
+  margin: -8px;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  text-align: left;
+}

@@ -8,10 +8,16 @@ import {
   TableTextInput
 } from '@patternfly/react-inline-edit-extension';
 import { Dropdown, DropdownToggle, DropdownItem, Checkbox } from '@patternfly/react-core';
+import { getJsonFromSceSim, getColumns, getRows } from './util';
 
-export class EditableRulesTable extends React.Component {
+class ScenarioEditor extends React.Component {
   constructor(props) {
     super(props);
+
+    const data = getJsonFromSceSim();
+    // console.log(data);
+    // console.log(getColumns(data));
+    // console.log(getRows(data));
 
     // text input
     const textInputFormatter = inlineEditFormatterFactory({
@@ -34,43 +40,43 @@ export class EditableRulesTable extends React.Component {
     });
 
     // dropdown
-    const workspacesFormatter = inlineEditFormatterFactory({
-      resolveValue: (value, { rowData }) => rowData.data.workspace,
-      renderEdit: (workspace, { column, rowData, columnIndex, rowIndex }, { activeEditId }) => {
+    const violationTypesFormatter = inlineEditFormatterFactory({
+      resolveValue: (value, { rowData }) => rowData.data.violationType,
+      renderEdit: (violationType, { column, rowData, columnIndex, rowIndex }, { activeEditId }) => {
         const dropdownItems = column.data.dropdownItems.map(item => <DropdownItem key={item}>{item}</DropdownItem>);
         const toggleId = this.makeId({ rowIndex, columnIndex, column, name: 'toggle' });
         return (
           <Dropdown
             id={this.makeId({ rowIndex, columnIndex, column, name: 'dropdown' })}
             onSelect={event =>
-              this.onWorkspaceChange({ selected: event.target.text, isDropdownOpen: false }, { rowIndex })
+              this.onViolationTypeChange({ selected: event.target.text, isDropdownOpen: false }, { rowIndex })
             }
             toggle={
               <DropdownToggle
                 id={toggleId}
                 autoFocus={activeEditId === toggleId}
-                onToggle={() => this.onWorkspaceChange({ isDropdownOpen: !workspace.isDropdownOpen }, { rowIndex })}
+                onToggle={() => this.onViolationTypeChange({ isDropdownOpen: !violationType.isDropdownOpen }, { rowIndex })}
               >
-                {workspace.selected}
+                {violationType.selected}
               </DropdownToggle>
             }
-            isOpen={workspace.isDropdownOpen}
+            isOpen={violationType.isDropdownOpen}
             dropdownItems={dropdownItems}
           />
         );
       },
-      renderValue: workspace => workspace.selected
+      renderValue: violationType => violationType.selected
     });
 
     // checkbox
-    const privateRepoFormatter = inlineEditFormatterFactory({
-      resolveValue: (value, { rowData }) => rowData.data.privateRepo,
-      renderEdit: (privateRepo, { column, columnIndex, rowIndex }) => (
+    const decisionOutcomeFormatter = inlineEditFormatterFactory({
+      resolveValue: (value, { rowData }) => rowData.data.decisionOutcome,
+      renderEdit: (decisionOutcome, { column, columnIndex, rowIndex }) => (
         <Checkbox
           id={this.makeId({ rowIndex, columnIndex, column })}
-          isChecked={privateRepo}
+          isChecked={decisionOutcome}
           onChange={value =>
-            this.onPrivateRepoChange(value, {
+            this.onDecisionOutcomeChange(value, {
               rowIndex,
               columnIndex
             })
@@ -78,10 +84,10 @@ export class EditableRulesTable extends React.Component {
           aria-label="checkbox"
         />
       ),
-      renderValue: (privateRepo, { columnIndex, rowIndex, column }) => (
+      renderValue: (decisionOutcome, { columnIndex, rowIndex, column }) => (
         <Checkbox
           id={this.makeId({ rowIndex, columnIndex, column })}
-          isChecked={privateRepo}
+          isChecked={decisionOutcome}
           isDisabled
           aria-label="checkbox"
         />
@@ -91,64 +97,77 @@ export class EditableRulesTable extends React.Component {
     this.state = {
       columns: [
         {
-          title: 'Repositories',
+          title: '#',
+        },
+        {
+          title: 'Scenario Description',
           cellFormatters: [textInputFormatter]
         },
         {
-          title: 'Branches',
-          cellFormatters: [(value, { rowData }) => rowData.data.branches[rowData.data.branches.length - 1]]
+          title: 'Points',
+          cellFormatters: [textInputFormatter]
         },
-        'Pull requests',
         {
-          title: 'Workspaces',
-          cellFormatters: [workspacesFormatter],
+          title: 'Type',
+          cellFormatters: [violationTypesFormatter],
           data: {
-            dropdownItems: ['Green', 'Purple', 'Orange', 'Grey']
+            dropdownItems: ['speed', 'parking']
           }
         },
         {
-          title: 'Last Commit',
+          title: 'Speed Limit',
           cellFormatters: [textInputFormatter]
         },
         {
-          title: 'Private',
-          cellFormatters: [privateRepoFormatter]
-        }
+          title: 'Actual Speed',
+          cellFormatters: [textInputFormatter]
+        },
+        {
+          title: 'Points',
+          cellFormatters: [textInputFormatter]
+        },
+        {
+          title: 'Amount',
+          cellFormatters: [textInputFormatter]
+        },
+        {
+          title: 'value',
+          cellFormatters: [decisionOutcomeFormatter]
+        },
       ],
       rows: [
         {
-          cells: ['one', null, 7, null, 'five', null],
+          cells: [1, 'Above speed limit: 10km/h and 30 km/h', 10, null, 100, 120, 3, 500, null],
           data: {
-            branches: ['master'],
-            workspace: {
-              selected: 'Green',
+            violationType: {
+              selected: 'speed',
               isDropdownOpen: false
             },
-            privateRepo: false
+            decisionOutcome: false
           }
           // isEditing: true,
         },
         {
-          cells: ['', null, 0, null, '', null],
+          cells: [2, 'Above speed limit: more than 30 km/h', 10, null, 100, 150, 7, 1000, null],
           data: {
-            branches: ['master', 'v0.7.0', 'v1.0.0'],
-            workspace: {
-              selected: 'Grey',
+            violationType: {
+              selected: 'speed',
               isDropdownOpen: false
             },
-            privateRepo: false
+            decisionOutcome: true
           }
+          // isEditing: true,
         },
         {
-          cells: ['p', null, 0, null, '', null],
+          cells: [3, 'Parking violation', 10, null, null, null, 1, 100, null],
           data: {
-            branches: ['master', 'v0.7.0'],
-            workspace: {
-              selected: 'Orange',
+            violationType: {
+              selected: 'parking',
               isDropdownOpen: false
             },
-            privateRepo: true
+            decisionOutcome: false
           }
+          // isEditing: true,
         }
       ],
       // eslint-disable-next-line react/no-unused-state
@@ -156,25 +175,25 @@ export class EditableRulesTable extends React.Component {
       activeEditId: null
     };
 
-    this.WORKSPACE_COL = 3;
-    this.PRIVATE_REPO_COL = 5;
-    this.ACTIONS_COL = 6;
+    this.WORKSPACE_COL = 3; //dropdown
+    this.PRIVATE_REPO_COL = 8; //cb
+    this.ACTIONS_COL = 9;
 
     this.makeId = ({ column, rowIndex, columnIndex, name }) =>
       `${column.property}-${rowIndex}-${columnIndex}${name ? `-${name}` : ''}`;
 
-    this.onPrivateRepoChange = (value, { rowIndex }) => {
+    this.onDecisionOutcomeChange = (value, { rowIndex }) => {
       this.setState(({ rows }) => {
         const row = rows[rowIndex];
-        row.data.privateRepo = value;
+        row.data.decisionOutcome = value;
         return { rows };
       });
     };
 
-    this.onWorkspaceChange = (value, { rowIndex }) => {
+    this.onViolationTypeChange = (value, { rowIndex }) => {
       this.setState(({ rows }) => {
         const row = rows[rowIndex];
-        row.data.workspace = Object.assign({}, row.data.workspace, value);
+        row.data.violationType = Object.assign({}, row.data.violationType, value);
         return { rows };
       });
     };
@@ -197,7 +216,7 @@ export class EditableRulesTable extends React.Component {
         const genericDropdownId = this.makeId({
           rowIndex,
           columnIndex,
-          column: { property: 'workspaces' }
+          column: { property: 'violationTypes' }
         });
         return (
           elementId &&
@@ -220,12 +239,12 @@ export class EditableRulesTable extends React.Component {
           rows: rows.map((row, id) => {
             if (id === rowIndex) {
               if (elementId && columnIndex === this.WORKSPACE_COL) {
-                row.data.workspace.isDropdownOpen = !row.data.workspace.isDropdownOpen;
+                row.data.violationType.isDropdownOpen = !row.data.violationType.isDropdownOpen;
               } else {
                 if (elementId && columnIndex === this.PRIVATE_REPO_COL) {
-                  row.data.privateRepo = !row.data.privateRepo;
+                  row.data.decisionOutcome = !row.data.decisionOutcome;
                 }
-                row.data.workspace.isDropdownOpen = false;
+                row.data.violationType.isDropdownOpen = false;
               }
             }
             return row;
@@ -297,7 +316,7 @@ export class EditableRulesTable extends React.Component {
 
     return (
       <Table
-        caption="Editable Table"
+        caption="Test scenarios"
         cells={columns}
         rows={rows}
         rowWrapper={ComposedRowWrapper}
@@ -309,3 +328,5 @@ export class EditableRulesTable extends React.Component {
     );
   }
 }
+
+export default ScenarioEditor;
