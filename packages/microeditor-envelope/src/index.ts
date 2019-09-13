@@ -18,7 +18,7 @@ import * as ReactDOM from "react-dom";
 import "@patternfly/react-core/dist/styles/base.css";
 import "@patternfly/patternfly/patternfly-addons.scss";
 import { EditorEnvelopeController } from "./EditorEnvelopeController";
-import { EnvelopeBusApi } from "appformer-js-microeditor-envelope-protocol";
+import { EnvelopeBusApi } from "@kogito-tooling/microeditor-envelope-protocol";
 import { SpecialDomElements } from "./SpecialDomElements";
 import { Renderer } from "./Renderer";
 import { ReactElement } from "react";

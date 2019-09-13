@@ -1,5 +1,5 @@
 {
-  "name": "appformer-js-vscode-extension-pack-simple-react",
+  "name": "vscode-extension-pack-simple-react",
   "displayName": "KIE :: Kogito Simple React Editor",
   "description": "",
   "version": "0.1.0",
@@ -86,15 +86,12 @@
     "webpack-cli": "3.0.8"
   },
   "dependencies": {
+    "@kogito-tooling/core-api": "0.1.0",
+    "@kogito-tooling/microeditor-envelope": "0.1.0",
+    "@kogito-tooling/microeditor-envelope-protocol": "0.1.0",
+    "@kogito-tooling/vscode-extension": "0.1.0",
     "@patternfly/patternfly": "^2.26.4",
     "@patternfly/react-core": "^3.87.3",
-    "@patternfly/react-inline-edit-extension": "^2.10.5",
-    "@patternfly/react-table": "^2.17.5",
-    "ag-grid-community": "^21.2.0",
-    "appformer-js-core": "0.1.0",
-    "appformer-js-microeditor-envelope": "0.1.0",
-    "appformer-js-microeditor-envelope-protocol": "0.1.0",
-    "appformer-js-vscode-extension": "0.1.0",
     "jsonix": "^3.0.0",
     "raw-loader": "^3.1.0"
   }
