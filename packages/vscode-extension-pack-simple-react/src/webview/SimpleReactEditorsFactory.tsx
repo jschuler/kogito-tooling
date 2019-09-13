@@ -19,7 +19,8 @@ import * as AppFormer from "@kogito-tooling/core-api";
 import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "@kogito-tooling/microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
-import { Editor, EditorContainer, getJsonFromSceSim } from '../components';
+import { getJsonFromSceSim } from '../components/utils';
+import { EditorContainer, Editor } from '../components';
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -79,11 +80,13 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     props.exposing(this);
+    const initial = getJsonFromSceSim();
     this.state = {
       originalContent: "",
       content: "",
-      myContent: getJsonFromSceSim()
+      myContent: initial
     };
+    console.log(initial);
   }
 
   public setContent(content: string) {
@@ -95,6 +98,7 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   private updateContent(content: string) {
+    console.log(content);
     return new Promise<void>(res => {
       this.setState({ content: content }, () => {
         this.props.messageBus.notify_dirtyIndicatorChange(this.isDirty());
@@ -116,8 +120,11 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     const { myContent } = this.state;
     return (
       <>
-      {/* <EditorContainer /> */}
-      {myContent ? <Editor data={myContent} /> : <div>Loading</div>}
+      {myContent ? (
+        <EditorContainer>
+          <Editor data={myContent} />
+        </EditorContainer>
+      ) : <div>Loading</div>}
       </>
     );
   }

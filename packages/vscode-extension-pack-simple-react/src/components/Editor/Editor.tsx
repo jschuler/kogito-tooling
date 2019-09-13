@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import "./Editor.css";
 import { getColumns, getRows } from "./gridUtils";
 
 const Editor: React.FC<{ data: any }> = ({ data }) => {
-  const [columnDefs, setColumnDefs] = useState<any>({});
-  const [rowData, setRowData] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [columnDefs, setColumnDefs] = React.useState<any>({});
+  const [rowData, setRowData] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(true);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const allColumns = getColumns(data, true);
+    console.log(allColumns);
     setColumnDefs(allColumns);
     setRowData(getRows(data));
     setLoading(false);

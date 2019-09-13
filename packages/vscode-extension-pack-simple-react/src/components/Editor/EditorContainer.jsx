@@ -1,6 +1,5 @@
-import React from 'react';
+import * as React from 'react';
 import { EditorToolbar } from './EditorToolbar';
-import { Editor } from './Editor';
 
 class EditorContainer extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class EditorContainer extends React.Component {
     return (
       <React.Fragment>
         <EditorToolbar />
-        <Editor />
+        {this.props.children}
       </React.Fragment>
     );
   }
