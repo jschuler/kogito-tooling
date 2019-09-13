@@ -159,7 +159,6 @@ export class KogitoEditor {
                     margin: 0;
                     border: 0;
                     padding: 0;
-                    overflow: hidden;
                     height: 100%;
                 }
                 .panel-heading.uf-listbar-panel-header span {

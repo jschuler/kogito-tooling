@@ -14,7 +14,7 @@ import {
 } from '@patternfly/react-core';
 import { ListUlIcon, SortAlphaDownIcon, TableIcon } from '@patternfly/react-icons';
 
-class ScenarioToolbar extends React.Component {
+class EditorToolbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -147,4 +147,4 @@ class ScenarioToolbar extends React.Component {
   }
 }
 
-export default ScenarioToolbar;
+export { EditorToolbar };

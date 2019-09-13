@@ -19,12 +19,7 @@ import * as AppFormer from "appformer-js-core";
 import * as MicroEditorEnvelope from "appformer-js-microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "appformer-js-microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
-// @ts-ignore
-import ScenarioContainer from './ScenarioContainer';
-// @ts-ignore
-import { CssGrid } from 'sce-sim-grid';
-import 'sce-sim-grid/src/components/Grid/CssGrid.css';
-import { getJsonFromSceSim } from './util';
+import { Editor, EditorContainer, getJsonFromSceSim } from '../components';
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -121,15 +116,8 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     const { myContent } = this.state;
     return (
       <>
-      <div className="pf-u-m-xl"><h1>PatternFly table</h1></div>
-      <ScenarioContainer />
-      <div className="pf-u-m-xl"><h1>(Interim) table</h1></div>
-      {myContent ? <CssGrid data={myContent} /> : <div>Loading</div>}
-      {/* <textarea
-        style={{ width: "100%", height: "100%" }}
-        value={this.state.content}
-        onInput={(e: any) => this.updateContent(e.target.value)}
-      /> */}
+      {/* <EditorContainer /> */}
+      {myContent ? <Editor data={myContent} /> : <div>Loading</div>}
       </>
     );
   }
