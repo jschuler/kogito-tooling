@@ -10,7 +10,7 @@
       var(--num-given-columns),
       minmax(auto, 1fr)
     ) [given-end expect-start] repeat(var(--num-expect-columns), 1fr) [expect-end grid-end];
-
+  grid-auto-rows: 1fr;
   grid-template-rows: [grid-row-start grid-row-header-start] 1fr [grid-row-instances-start] 1fr [grid-row-properties-start] 1fr [grid-row-header-end grid-row-data-start] 1fr 1fr [grid-row-data-end grid-row-end];
 }
 

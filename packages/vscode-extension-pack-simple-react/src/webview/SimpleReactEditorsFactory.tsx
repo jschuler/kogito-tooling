@@ -117,7 +117,8 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   public render() {
-    const { myContent } = this.state;
+    const { myContent, content } = this.state;
+    console.log(content)
     return (
       <>
       {myContent ? (
