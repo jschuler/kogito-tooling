@@ -19,7 +19,7 @@ import * as AppFormer from "@kogito-tooling/core-api";
 import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "@kogito-tooling/microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
-import { getJsonFromSceSim } from '../components/utils';
+import { getJsonFromSceSim, setSceSimFromJson } from '../components/utils';
 import { EditorContainer, Editor } from '../components';
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
@@ -48,7 +48,7 @@ class ReactReadonlyAppFormerEditor extends AppFormer.Editor {
   }
 
   public getContent(): Promise<string> {
-    console.info(this.self.getContent());
+    console.info(`getContent: ${this.self.getContent()}`);
     return this.self.getContent();
   }
 
@@ -57,6 +57,7 @@ class ReactReadonlyAppFormerEditor extends AppFormer.Editor {
   }
 
   public setContent(content: string): Promise<void> {
+    console.info(`setContent: ${content}`)
     return this.self.setContent(content);
   }
 
@@ -73,20 +74,16 @@ interface Props {
 interface State {
   content: string;
   originalContent: string;
-  myContent: string;
 }
 
 class ReactReadonlyEditor extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     props.exposing(this);
-    const initial = getJsonFromSceSim();
     this.state = {
       originalContent: "",
-      content: "",
-      myContent: initial
+      content: ""
     };
-    console.log(initial);
   }
 
   public setContent(content: string) {
@@ -94,10 +91,15 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
       this.setState({ originalContent: content }, () => {
         res();
       })
-    ).then(() => this.updateContent(content));
+    ).then(() => {
+      if (content) {
+        this.updateContent(getJsonFromSceSim(content));
+      }
+    });
   }
 
   private updateContent(content: string) {
+    console.log('converted scesim')
     console.log(content);
     return new Promise<void>(res => {
       this.setState({ content: content }, () => {
@@ -109,7 +111,11 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
 
   //saving triggers this method, so we also update the originalContent by calling `this.setContent`
   public getContent() {
-    return this.setContent(this.state.content).then(() => this.state.content);
+    console.log(`ReactReadonlyEditor getContent`);
+    console.log(this.state.content); // JSON object
+    const asd = setSceSimFromJson(this.state.content);
+    console.log(asd);
+    return this.setContent(asd).then(() => this.state.content);
   }
 
   public isDirty() {
@@ -117,13 +123,13 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   public render() {
-    const { myContent, content } = this.state;
-    console.log(content)
+    const { content } = this.state;
+    console.log(`render: ${content}`)
     return (
       <>
-      {myContent ? (
+      {content ? (
         <EditorContainer>
-          <Editor data={myContent} />
+          <Editor data={content} />
         </EditorContainer>
       ) : <div>Loading</div>}
       </>

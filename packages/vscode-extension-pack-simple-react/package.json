@@ -42,6 +42,17 @@
           "bpmn2",
           "Business Process Model and Notation"
         ]
+      },
+      {
+        "id": "scesim",
+        "extensions": [
+          ".scesim"
+        ],
+        "aliases": [
+          "scesim",
+          "Scenario Simulation",
+          "Test Scenario"
+        ]
       }
     ]
   },

@@ -1,0 +1,920 @@
+{
+  "name": {
+    "namespaceURI": "",
+    "localPart": "ScenarioSimulationModel",
+    "prefix": "",
+    "key": "ScenarioSimulationModel",
+    "string": "ScenarioSimulationModel"
+  },
+  "value": {
+    "TYPE_NAME": "rules.ScenarioSimulationModelType",
+    "version": "1.5",
+    "simulation": {
+      "TYPE_NAME": "rules.SimulationType",
+      "simulationDescriptor": {
+        "TYPE_NAME": "rules.SimulationDescriptorType",
+        "factMappings": {
+          "TYPE_NAME": "rules.FactMappingsType",
+          "factMapping": [
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType"
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "Index",
+                "type": "OTHER"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "#",
+                "className": "java.lang.Integer"
+              },
+              "className": "java.lang.Integer",
+              "factAlias": "#"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType"
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "Description",
+                "type": "OTHER"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "Scenario description",
+                "className": "java.lang.String"
+              },
+              "className": "java.lang.String",
+              "factAlias": "Scenario description"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Driver"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Points"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|1",
+                "type": "GIVEN"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "Driver",
+                "className": "Driver"
+              },
+              "className": "number",
+              "factAlias": "Driver",
+              "expressionAlias": "Points"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Violation"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Type"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|6",
+                "type": "GIVEN"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "Violation",
+                "className": "Violation"
+              },
+              "className": "Type",
+              "factAlias": "Violation",
+              "expressionAlias": "Type"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Violation"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Speed Limit"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|7",
+                "type": "GIVEN"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType"
+              },
+              "className": "number",
+              "factAlias": "Violation",
+              "expressionAlias": "Speed Limit"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Violation"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Actual Speed"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|8",
+                "type": "GIVEN"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType"
+              },
+              "className": "number",
+              "factAlias": "Violation",
+              "expressionAlias": "Actual Speed"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Fine"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Points"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|11",
+                "type": "EXPECT"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "Fine",
+                "className": "Fine"
+              },
+              "className": "number",
+              "factAlias": "Fine",
+              "expressionAlias": "Points"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Fine"
+                  },
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Amount"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|12",
+                "type": "EXPECT"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType"
+              },
+              "className": "number",
+              "factAlias": "Fine",
+              "expressionAlias": "Amount"
+            },
+            {
+              "TYPE_NAME": "rules.FactMappingType",
+              "expressionElements": {
+                "TYPE_NAME": "rules.ExpressionElementsType",
+                "expressionElement": [
+                  {
+                    "TYPE_NAME": "rules.ExpressionElementType",
+                    "step": "Should the driver be suspended?"
+                  }
+                ]
+              },
+              "expressionIdentifier": {
+                "TYPE_NAME": "rules.ExpressionIdentifierType",
+                "name": "0|13",
+                "type": "EXPECT"
+              },
+              "factIdentifier": {
+                "TYPE_NAME": "rules.FactIdentifierType",
+                "name": "Should the driver be suspended?",
+                "className": "Should the driver be suspended?"
+              },
+              "className": "string",
+              "factAlias": "Should the driver be suspended?",
+              "expressionAlias": "value"
+            }
+          ]
+        },
+        "dmnFilePath": "src/main/resources/org/kie/example/traffic/traffic_violation/Traffic Violation.dmn",
+        "type": "DMN",
+        "fileName": "",
+        "dmnNamespace": "",
+        "dmnName": "",
+        "skipFromBuild": false
+      },
+      "scenarios": {
+        "TYPE_NAME": "rules.ScenariosType",
+        "scenario": [
+          {
+            "TYPE_NAME": "rules.ScenarioType",
+            "factMappingValues": {
+              "TYPE_NAME": "rules.FactMappingValuesType",
+              "factMappingValue": [
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "Above speed limit: 10km/h and 30 km/h"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "10"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"speed\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "100"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "120"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "3"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "500"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"No\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "1"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "TYPE_NAME": "rules.ScenarioType",
+            "factMappingValues": {
+              "TYPE_NAME": "rules.FactMappingValuesType",
+              "factMappingValue": [
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "Above speed limit: more than 30 km/h"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "10"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"speed\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "100"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "150"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "7"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "1000"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"No\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "TYPE_NAME": "rules.ScenarioType",
+            "factMappingValues": {
+              "TYPE_NAME": "rules.FactMappingValuesType",
+              "factMappingValue": [
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "Parking violation"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "10"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"parking\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "1"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "100"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"No\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "3"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "TYPE_NAME": "rules.ScenarioType",
+            "factMappingValues": {
+              "TYPE_NAME": "rules.FactMappingValuesType",
+              "factMappingValue": [
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "DUI violation"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "10"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"driving under the influence\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "5"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "1000"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"No\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "4"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "TYPE_NAME": "rules.ScenarioType",
+            "factMappingValues": {
+              "TYPE_NAME": "rules.FactMappingValuesType",
+              "factMappingValue": [
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "Driver suspended"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "15"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"speed\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "100"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "140"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "7"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "1000"
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "\"Yes\""
+                  }
+                },
+                {
+                  "TYPE_NAME": "rules.FactMappingValueType",
+                  "factIdentifier": {
+                    "TYPE_NAME": "rules.FactIdentifierType"
+                  },
+                  "expressionIdentifier": {
+                    "TYPE_NAME": "rules.ExpressionIdentifierType"
+                  },
+                  "rawValue": {
+                    "TYPE_NAME": "rules.RawValueType",
+                    "clazz": "string",
+                    "value": "5"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "imports": {
+      "TYPE_NAME": "rules.ImportsType",
+      "imports": {
+        "TYPE_NAME": "rules.WrappedImportsType"
+      }
+    }
+  }
+}

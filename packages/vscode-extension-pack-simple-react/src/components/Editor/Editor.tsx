@@ -9,7 +9,7 @@ const Editor: React.FC<{ data: any }> = ({ data }) => {
 
   React.useEffect(() => {
     const allColumns = getColumns(data, true);
-    console.log(allColumns);
+    console.log(`allColumns: ${allColumns}`);
     setColumnDefs(allColumns);
     setRowData(getRows(data));
     setLoading(false);
@@ -30,8 +30,6 @@ const Editor: React.FC<{ data: any }> = ({ data }) => {
       .getElementById("kie-grid")!
       .style.setProperty("--num-expect-columns", num.toString());
   };
-
-  console.log('state update');
 
   return loading ? <div>Loading</div> : (
     <div id="kie-grid" className="kie-grid">

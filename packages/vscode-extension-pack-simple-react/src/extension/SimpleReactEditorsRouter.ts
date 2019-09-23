@@ -37,6 +37,12 @@ export class SimpleReactEditorsRouter implements Router<SimpleReactEditorsLangua
         {
           type: "react"
         }
+      ],
+      [
+        "scesim",
+        {
+          type: "react"
+        }
       ]
     ]);
   }

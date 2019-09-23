@@ -11,3 +11,9 @@ The `scesim.xsd` schema is from [drools-wb](https://github.com/gitgabrio/drools-
 
 Running the command requires Java 1.8, running a newer version might net this [error](https://github.com/highsource/jsonix-schema-compiler/issues/81)
 TODO: Find a way to load and use a local dependency of Java 1.8
+
+# User flow
+- the user creates a DMN file.. edit and create the rules there
+- close it
+- then user create a NEW scesim file
+- when editor open an empty scesim file.. it'll ask for the source. the user points to the DMN and then user will be guided (ie. wizard) to create the scenario to the rule
