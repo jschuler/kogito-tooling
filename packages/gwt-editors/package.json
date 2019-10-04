@@ -1,5 +1,5 @@
 {
-  "name": "@kogito-tooling/microeditor-envelope-protocol",
+  "name": "@kogito-tooling/gwt-editors",
   "version": "0.1.1",
   "description": "",
   "license": "Apache-2.0",
@@ -10,7 +10,8 @@
     "url": "https://github.com/kiegroup/kogito-tooling.git"
   },
   "dependencies": {
-    "@kogito-tooling/core-api": "0.1.1"
+    "@kogito-tooling/core-api": "0.1.1",
+    "@kogito-tooling/microeditor-envelope": "0.1.1"
   },
   "scripts": {
     "lint": "tslint -c ../../tslint.json 'src/**/*.{ts,tsx,js,jsx}'",

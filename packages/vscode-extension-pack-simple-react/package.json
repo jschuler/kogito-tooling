@@ -2,7 +2,7 @@
   "name": "vscode-extension-pack-simple-react",
   "displayName": "KIE :: Kogito Simple React Editor",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "engines": {
     "vscode": "^1.33.0"
@@ -99,10 +99,10 @@
     "webpack-cli": "3.0.8"
   },
   "dependencies": {
-    "@kogito-tooling/core-api": "0.1.0",
-    "@kogito-tooling/microeditor-envelope": "0.1.0",
-    "@kogito-tooling/microeditor-envelope-protocol": "0.1.0",
-    "@kogito-tooling/vscode-extension": "0.1.0",
+    "@kogito-tooling/core-api": "0.1.1",
+    "@kogito-tooling/microeditor-envelope": "0.1.1",
+    "@kogito-tooling/microeditor-envelope-protocol": "0.1.1",
+    "@kogito-tooling/vscode-extension": "0.1.1",
     "@patternfly/patternfly": "^2.26.4",
     "@patternfly/react-core": "^3.112.3",
     "babel-preset-react": "^6.24.1",

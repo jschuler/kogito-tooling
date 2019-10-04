@@ -14,17 +14,22 @@
  * limitations under the License.
  */
 
-export enum EnvelopeBusMessageType {
-  REQUEST_LANGUAGE,
-  RETURN_LANGUAGE,
+import { Router, Routes } from "@kogito-tooling/core-api";
 
-  REQUEST_INIT,
-  RETURN_INIT,
+export class ChromeRouter extends Router {
+  constructor(...routesArray: Routes[]) {
+    super(...routesArray);
+  }
 
-  REQUEST_CONTENT,
-  RETURN_CONTENT,
+  public getRelativePathTo(uri: string): string {
+    return `${this.getTargetOrigin()}/kiegroup/kogito-online/chrome-extension-resources/${uri}`;
+  }
 
-  NOTIFY_SET_CONTENT_ERROR,
-  NOTIFY_DIRTY_INDICATOR_CHANGE,
-  NOTIFY_READY
+  public getLanguageData(fileExtension: string) {
+    return this.getLanguageDataByFileExtension().get(fileExtension);
+  }
+
+  public getTargetOrigin() {
+    return "https://raw.githubusercontent.com";
+  }
 }
