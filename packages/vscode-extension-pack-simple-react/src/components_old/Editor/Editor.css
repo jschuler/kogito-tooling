@@ -10,9 +10,8 @@
       var(--num-given-columns),
       minmax(auto, 1fr)
     ) [given-end expect-start] repeat(var(--num-expect-columns), 1fr) [expect-end grid-end];
-
-  grid-template-rows: [grid-row-start grid-row-header-start] 1fr [grid-row-instances-start] 1fr [grid-row-properties-start] 1fr [grid-row-header-end grid-row-data-start] 1fr [grid-row-data-end grid-row-end];
   grid-auto-rows: 1fr;
+  grid-template-rows: [grid-row-start grid-row-header-start] 1fr [grid-row-instances-start] 1fr [grid-row-properties-start] 1fr [grid-row-header-end grid-row-data-start] 1fr 1fr [grid-row-data-end grid-row-end];
 }
 
 .kie-grid__item {
@@ -49,16 +48,18 @@
   padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
   text-align: center;
 }
-.kie-grid__body,
-.kie-grid__body > div,
-.kie-grid__body > div > .infinite-scroll-component,
 .kie-grid__rule,
 .kie-grid__header--given,
 .kie-grid__header--expect {
   display: contents;
 }
 
-.vList,
-.vList > div {
-  display: contents;
+input[type="text"] {
+  height: 100%;
+  margin: -8px;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  text-align: left;
 }

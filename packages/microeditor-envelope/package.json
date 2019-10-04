@@ -1,6 +1,6 @@
 {
   "name": "@kogito-tooling/microeditor-envelope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
@@ -10,15 +10,13 @@
     "url": "https://github.com/kiegroup/kogito-tooling.git"
   },
   "dependencies": {
+    "@kogito-tooling/core-api": "0.1.1",
+    "@kogito-tooling/microeditor-envelope-protocol": "0.1.1",
     "@patternfly/patternfly": "2.27.0",
-    "@patternfly/react-core": "3.87.3",
     "@types/react": "16.8.8",
     "@types/react-dom": "16.8.2",
-    "@kogito-tooling/core-api": "0.1.0",
-    "@kogito-tooling/microeditor-envelope-protocol": "0.1.0",
     "react": "16.8.0",
-    "react-dom": "16.8.4",
-    "sass-loader": "^7.3.1"
+    "react-dom": "16.8.4"
   },
   "scripts": {
     "lint": "tslint -c ../../tslint.json 'src/**/*.{ts,tsx,js,jsx}'",
@@ -53,6 +51,7 @@
     "jest": "23.5.0",
     "jest-junit": "6.3.0",
     "node-sass": "4.12.0",
+    "null-loader": "3.0.0",
     "prettier": "1.14.2",
     "sass-loader": "7.3.1",
     "style-loader": "1.0.0",

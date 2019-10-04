@@ -29,7 +29,7 @@ module.exports = {
     filename: "[name].js",
     libraryTarget: "commonjs2"
   },
-  externals: [nodeExternals({ modulesDir: "../../node_modules" })],
+  externals: [nodeExternals({ modulesDir: "../../node_modules", whitelist: /@patternfly/ })],
   plugins: [
     new CircularDependencyPlugin({
       exclude: /node_modules/, // exclude detection of files based on a RegExp
@@ -46,8 +46,7 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              experimentalWatchApi: true,
-              configFile: path.resolve(__dirname, "tsconfig.json")
+              configFile: path.resolve("./tsconfig.json")
             }
           }
         ]
@@ -55,67 +54,63 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["react"]
-            }
-          }
-        ]
+        use: ["babel-loader"]
       },
       {
         test: /\.s[ac]ss$/i,
         include: [
-          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "src"), 
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly")
         ],
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, "src"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/base.css"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/esm/@patternfly/patternfly"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/node_modules/@patternfly/react-styles/css")
+          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly")
         ],
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(svg|ttf|eot|woff|woff2)$/,
+        test: /\.(woff)$/,
         include: [
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/fonts"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/pficon"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/fonts"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/pficon")
+          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/fonts/RedHatDisplay"),
+          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/fonts/RedHatText"),
         ],
-        use: ["file-loader"]
+        use: {
+          loader: 'file-loader',
+          options: {
+            limit: 244,
+            outputPath: 'fonts',
+            name: '[name].[ext]',
+          }
+        }
       },
       {
-        test: /\.(jpg|jpeg|png|gif)$/i,
-        include: [
-          path.resolve(__dirname, "src"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/images"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css/assets/images"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/react-core/node_modules/@patternfly/react-styles/css/assets/images")
-        ],
-        use: ["file-loader"]
-      }
+        test: /RedHat.*\.(woff2|ttf|eot|otf|svg)/,
+        loader: 'null-loader',
+      },
+      {
+        test: /overpass-.*\.(woff2?|ttf|eot|otf)(\?.*$|$)/,
+        loader: 'null-loader',
+      },
+      {
+        test: /pficon\.(woff2?|ttf|eot|otf|svg)/,
+        loader: 'null-loader',
+      },
+      {
+        test: /fa-solid-900\.(woff2?|ttf|eot|otf|svg)/,
+        loader: 'null-loader',
+      },
+      {
+        test: /pfbg_.*\.jpg$/,
+        loader: 'null-loader',
+      },
     ]
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
-    modules: [
-      path.resolve(__dirname, "../../node_modules"), 
-      path.resolve(__dirname, "node_modules"), 
-      path.resolve(__dirname, "src")]
+    modules: [path.resolve("../../node_modules"), path.resolve("./node_modules"), path.resolve("./src")]
   }
 };

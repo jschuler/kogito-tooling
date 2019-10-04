@@ -15,8 +15,6 @@
  */
 
 import * as ReactDOM from "react-dom";
-import "@patternfly/react-core/dist/styles/base.css";
-import "@patternfly/patternfly/patternfly-addons.scss";
 import { EditorEnvelopeController } from "./EditorEnvelopeController";
 import { EnvelopeBusApi } from "@kogito-tooling/microeditor-envelope-protocol";
 import { SpecialDomElements } from "./SpecialDomElements";
@@ -29,7 +27,9 @@ export * from "./EnvelopeBusInnerMessageHandler";
 
 class ReactDomRenderer implements Renderer {
   public render(element: ReactElement, container: HTMLElement, callback: () => void) {
-    ReactDOM.render(element, container, callback);
+    setImmediate(() => {
+      ReactDOM.render(element, container, callback);
+    });
   }
 }
 

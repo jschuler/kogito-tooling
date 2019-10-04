@@ -16,16 +16,8 @@
 
 import * as React from "react";
 import { useState } from "react";
-import "@patternfly/react-core/dist/styles/base.css";
-import "@patternfly/patternfly/patternfly-addons.scss";
-import {
-  Bullseye,
-  Title,
-  EmptyState,
-  EmptyStateVariant,
-  EmptyStateBody,
-  Page
-} from "@patternfly/react-core";
+import "@patternfly/patternfly/patternfly-no-reset.css";
+import "@patternfly/patternfly/patternfly-addons.css";
 import "./styles.scss";
 import "./spinner.scss";
 
@@ -44,23 +36,25 @@ export function LoadingScreen(props: { visible: boolean }) {
   return (
     (mustRender && (
       <div className="kogito-tooling--loading-screen" style={{ ...cssAnimation }} onTransitionEnd={() => setMustRender(false)}>
-        <Page>
-        <Bullseye>
-          <EmptyState variant={EmptyStateVariant.large}>
-            <div className="pf-u-mb-lg">
-              <div className="pf-c-spinner" role="progressbar" aria-valuetext="Loading...">
-                <div className="pf-c-spinner__clipper" />
-                <div className="pf-c-spinner__lead-ball" />
-                <div className="pf-c-spinner__tail-ball" />
+        <div className="pf-c-page">
+          <main role="main" className="pf-c-page__main" tabIndex={-1}>
+            <div className="pf-l-bullseye">
+              <div className="pf-c-empty-state pf-m-lg">
+                <div className="pf-u-mb-lg">
+                  <div className="pf-c-spinner" role="progressbar" aria-valuetext="Loading...">
+                    <div className="pf-c-spinner__clipper" />
+                    <div className="pf-c-spinner__lead-ball" />
+                    <div className="pf-c-spinner__tail-ball" />
+                  </div>
+                </div>
+                <h5 className="pf-c-title pf-m-lg">
+                  Loading...
+                </h5>
+                <div className="pf-c-empty-state__body" />
               </div>
             </div>
-            <Title headingLevel="h5" size="lg">
-              Loading...
-            </Title>
-            <EmptyStateBody />
-          </EmptyState>
-        </Bullseye>
-        </Page>
+          </main>
+        </div>
       </div>
     )) || <></>
   );

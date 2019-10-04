@@ -1,0 +1,33 @@
+.editor-input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.editor-input.pf-c-form-control,
+.editor-input.pf-c-form-control[readonly],
+.editor-input.pf-c-form-control[readonly]:hover,
+.editor-input.pf-c-form-control[readonly]:focus {
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.editor-input.pf-c-form-control[readonly] {
+  background-color: white;
+}
+
+.editor-input.pf-c-form-control[readonly]:focus {
+  text-align: center;
+}
+
+.editor-input.pf-c-form-control:focus {
+  text-align: left;
+}

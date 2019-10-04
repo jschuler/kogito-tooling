@@ -20,7 +20,7 @@ import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "@kogito-tooling/microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
 import { getJsonFromSceSim, setSceSimFromJson } from '../components/utils';
-import { EditorContainer, Editor } from '../components';
+import { EditorContainer, Editor } from '../components_old';
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -128,6 +128,7 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     return (
       <>
       {content ? (
+        // <EditorContainer data={content} model={{ _title: 'No model' }} />
         <EditorContainer>
           <Editor data={content} />
         </EditorContainer>

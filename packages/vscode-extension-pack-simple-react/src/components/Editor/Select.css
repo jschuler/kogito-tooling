@@ -1,0 +1,12 @@
+.pf-c-select__toggle::before {
+  border: none;
+}
+
+.pf-c-select,
+.pf-c-select > button {
+  height: 100%;
+}
+
+.pf-c-select > button:focus {
+  outline-offset: -2px;
+}
