@@ -11,9 +11,7 @@
 			],
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"
-			],
-			"sourceMaps": true,
-			"stopOnEntry": false
+			]
 		}
 	]
 }
