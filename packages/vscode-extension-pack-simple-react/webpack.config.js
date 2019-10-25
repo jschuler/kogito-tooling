@@ -16,7 +16,6 @@
 
 const path = require("path");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
-const nodeExternals = require('webpack-node-externals');
 
 const commonConfig = {
   mode: "development",
@@ -28,8 +27,9 @@ const commonConfig = {
     libraryTarget: "umd",
     umdNamedDefine: true
   },
-  // externals: [/@kogito\/sce/, { vscode: "commonjs vscode" }],
-  externals: { vscode: "commonjs vscode" },
+  externals: {
+    vscode: "commonjs vscode"
+  },
   plugins: [
     new CircularDependencyPlugin({
       exclude: /node_modules/, // exclude detection of files based on a RegExp
@@ -41,45 +41,19 @@ const commonConfig = {
     rules: [
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, "src"),
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              experimentalWatchApi: true,
-              configFile: path.resolve(__dirname, "tsconfig.json")
-            }
-          }
-        ]
+        loader: "ts-loader",
+        options: {
+          configFile: path.resolve("./tsconfig.json")
+        }
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["react"]
-            }
-          }
-        ]
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        include: [
-          path.resolve(__dirname, "src"),
-          path.resolve(__dirname, "../../node_modules/@patternfly/patternfly")
-        ],
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
+        use: ["babel-loader"]
       },
       {
         test: /\.css$/,
         include: [
-          path.resolve(__dirname, "src"),
           /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css"),
@@ -92,7 +66,6 @@ const commonConfig = {
       {
         test: /\.(svg|ttf|eot|woff|woff2)$/,
         include: [
-          /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/fonts"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/pficon"),
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/fonts"),
@@ -103,7 +76,6 @@ const commonConfig = {
       {
         test: /\.(jpg|jpeg|png|gif)$/i,
         include: [
-          /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/images"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css/assets/images"),
@@ -115,10 +87,7 @@ const commonConfig = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
-    modules: [
-      path.resolve(__dirname, "../../node_modules"), 
-      path.resolve(__dirname, "node_modules"), 
-      path.resolve(__dirname, "src")]
+    modules: [path.resolve("../../node_modules"), path.resolve("./node_modules"), path.resolve("./src")]
   }
 };
 

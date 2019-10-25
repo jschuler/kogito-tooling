@@ -1,14 +1,7 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-			"declaration": false,
-			"allowJs": true,
-			"allowSyntheticDefaultImports": true,
-			"outDir": "dist"
+      "declaration": false
 	},
-	"include": ["src"],
-	"exclude": [
-		"node_modules",
-    "dist"
-	]
+	"include": ["src"]
 }

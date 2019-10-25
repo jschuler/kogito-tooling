@@ -136,10 +136,7 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     return (
       <React.Fragment>
       {(content && dmnJson) ? (
-        <EditorContainer data={content} model={dmnJson} />
-        // <EditorContainer>
-        //   <Editor data={content} />
-        // </EditorContainer>
+        <EditorContainer data={content} model={dmnJson} readOnly />
       ) : <div>Loading</div>}
       </React.Fragment>
     );
