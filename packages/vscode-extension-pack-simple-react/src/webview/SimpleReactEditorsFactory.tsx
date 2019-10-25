@@ -124,7 +124,8 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   public isDirty() {
-    return this.state.content !== this.state.originalContent;
+    return false;
+    // return this.state.content !== this.state.originalContent;
   }
 
   public render() {
@@ -136,7 +137,7 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     return (
       <React.Fragment>
       {(content && dmnJson) ? (
-        <EditorContainer data={content} model={dmnJson} readOnly />
+        <EditorContainer data={content} model={dmnJson} readOnly={false} />
       ) : <div>Loading</div>}
       </React.Fragment>
     );

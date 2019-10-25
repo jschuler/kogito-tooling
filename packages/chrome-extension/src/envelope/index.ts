@@ -17,6 +17,7 @@
 import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
 import { GwtAppFormerApi, GwtEditorWrapperFactory } from "@kogito-tooling/gwt-editors";
 import { EnvelopeBusMessage } from "@kogito-tooling/microeditor-envelope-protocol";
+// import { SimpleReactEditorsFactory } from "../../../vscode-extension-pack-simple-react/src/webview/SimpleReactEditorsFactory";
 
 const gwtAppFormerApi = new GwtAppFormerApi();
 gwtAppFormerApi.setClientSideOnly(true);
@@ -29,4 +30,5 @@ MicroEditorEnvelope.init({
     }
   },
   editorFactory: new GwtEditorWrapperFactory(gwtAppFormerApi)
+  // editorFactory: new SimpleReactEditorsFactory() 
 });

@@ -9279,7 +9279,7 @@ saxes@^3.1.9:
   dependencies:
     xmlchars "^2.1.1"
 
-sce-sim-grid@^0.3.0-rc4:
+sce-sim-grid@0.3.0-rc4:
   version "0.3.0-rc4"
   resolved "https://registry.yarnpkg.com/sce-sim-grid/-/sce-sim-grid-0.3.0-rc4.tgz#0e66b27abd309eda4223c8fa46d15dec27fdcb4b"
   integrity sha512-By1avGLRRP37VfvXkRTEbTTjUQ3nSR7gNWBHoa+HZX5WFgD2AaIbcf3YGf+XmeS7HA8KpfWWQz5Qx+txqExgBg==
