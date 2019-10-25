@@ -19,8 +19,9 @@ import * as AppFormer from "@kogito-tooling/core-api";
 import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
 import { EnvelopeBusInnerMessageHandler } from "@kogito-tooling/microeditor-envelope";
 import { SimpleReactEditorsLanguageData } from "../common/SimpleReactEditorsLanguageData";
-import { getJsonFromSceSim, setSceSimFromJson } from '../components/utils';
-import { EditorContainer, Editor } from '../components_old';
+import { EditorContainer, getJsonFromSceSim, setSceSimFromJson, getJsonFromDmn } from 'sce-sim-grid';
+// @ts-ignore
+const dmnJson = require('../../data/unmarshalled_dmn.json');
 
 export class SimpleReactEditorsFactory implements MicroEditorEnvelope.EditorFactory<SimpleReactEditorsLanguageData> {
   public createEditor(
@@ -74,6 +75,7 @@ interface Props {
 interface State {
   content: string;
   originalContent: string;
+  model: any;
 }
 
 class ReactReadonlyEditor extends React.Component<Props, State> {
@@ -82,11 +84,14 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
     props.exposing(this);
     this.state = {
       originalContent: "",
-      content: ""
+      content: "",
+      model: null
     };
   }
 
   public setContent(content: string) {
+    console.log(`setContent`);
+    console.log(content);
     return new Promise<void>(res =>
       this.setState({ originalContent: content }, () => {
         res();
@@ -99,8 +104,8 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   }
 
   private updateContent(content: string) {
-    console.log('converted scesim')
-    console.log(content);
+    // console.log('converted scesim')
+    // console.log(content);
     return new Promise<void>(res => {
       this.setState({ content: content }, () => {
         this.props.messageBus.notify_dirtyIndicatorChange(this.isDirty());
@@ -124,16 +129,19 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
 
   public render() {
     const { content } = this.state;
-    console.log(`render: ${content}`)
+    console.log(`content:`);
+    console.log(content);
+    console.log(`dmn:`);
+    console.log(dmnJson);
     return (
-      <>
-      {content ? (
-        // <EditorContainer data={content} model={{ _title: 'No model' }} />
-        <EditorContainer>
-          <Editor data={content} />
-        </EditorContainer>
+      <React.Fragment>
+      {(content && dmnJson) ? (
+        <EditorContainer data={content} model={dmnJson} />
+        // <EditorContainer>
+        //   <Editor data={content} />
+        // </EditorContainer>
       ) : <div>Loading</div>}
-      </>
+      </React.Fragment>
     );
   }
 }

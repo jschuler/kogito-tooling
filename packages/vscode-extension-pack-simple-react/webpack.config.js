@@ -16,6 +16,7 @@
 
 const path = require("path");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
+const nodeExternals = require('webpack-node-externals');
 
 const commonConfig = {
   mode: "development",
@@ -27,9 +28,8 @@ const commonConfig = {
     libraryTarget: "umd",
     umdNamedDefine: true
   },
-  externals: {
-    vscode: "commonjs vscode"
-  },
+  // externals: [/@kogito\/sce/, { vscode: "commonjs vscode" }],
+  externals: { vscode: "commonjs vscode" },
   plugins: [
     new CircularDependencyPlugin({
       exclude: /node_modules/, // exclude detection of files based on a RegExp
@@ -80,6 +80,7 @@ const commonConfig = {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, "src"),
+          /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/base.css"),
@@ -91,6 +92,7 @@ const commonConfig = {
       {
         test: /\.(svg|ttf|eot|woff|woff2)$/,
         include: [
+          /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/fonts"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/pficon"),
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets/fonts"),
@@ -101,6 +103,7 @@ const commonConfig = {
       {
         test: /\.(jpg|jpeg|png|gif)$/i,
         include: [
+          /sce-sim-grid/,
           path.resolve(__dirname, "../../node_modules/@patternfly/patternfly/assets"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-core/dist/styles/assets/images"),
           path.resolve(__dirname, "../../node_modules/@patternfly/react-styles/css/assets/images"),
