@@ -1,0 +1,1096 @@
+{
+  "name": {
+    "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+    "localPart": "definitions",
+    "prefix": "dmn",
+    "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}definitions",
+    "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:definitions"
+  },
+  "value": {
+    "TYPE_NAME": "dmn.TDefinitions",
+    "id": "_1C792953-80DB-4B32-99EB-25FBE32BAF9E",
+    "name": "Traffic Violation",
+    "expressionLanguage": "http://www.omg.org/spec/DMN/20180521/FEEL/",
+    "typeLanguage": "http://www.omg.org/spec/DMN/20180521/FEEL/",
+    "namespace": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+    "otherAttributes": {
+      "{http://www.w3.org/2000/xmlns/}dmn": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+      "{http://www.w3.org/2000/xmlns/}xmlns": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+      "{http://www.w3.org/2000/xmlns/}di": "http://www.omg.org/spec/DMN/20180521/DI/",
+      "{http://www.w3.org/2000/xmlns/}kie": "http://www.drools.org/kie/dmn/1.2",
+      "{http://www.w3.org/2000/xmlns/}feel": "http://www.omg.org/spec/DMN/20180521/FEEL/",
+      "{http://www.w3.org/2000/xmlns/}dmndi": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+      "{http://www.w3.org/2000/xmlns/}dc": "http://www.omg.org/spec/DMN/20180521/DC/",
+      "id": "_1C792953-80DB-4B32-99EB-25FBE32BAF9E",
+      "name": "Traffic Violation",
+      "expressionLanguage": "http://www.omg.org/spec/DMN/20180521/FEEL/",
+      "typeLanguage": "http://www.omg.org/spec/DMN/20180521/FEEL/",
+      "namespace": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF"
+    },
+    "extensionElements": {
+      "TYPE_NAME": "dmn.TDMNElement.ExtensionElements"
+    },
+    "itemDefinition": [
+      {
+        "TYPE_NAME": "dmn.TItemDefinition",
+        "id": "_63824D3F-9173-446D-A940-6A7F0FA056BB",
+        "name": "tDriver",
+        "isCollection": false,
+        "otherAttributes": {
+          "id": "_63824D3F-9173-446D-A940-6A7F0FA056BB",
+          "name": "tDriver",
+          "isCollection": "false"
+        },
+        "itemComponent": [
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_9DAB5DAA-3B44-4F6D-87F2-95125FB2FEE4",
+            "name": "Name",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_9DAB5DAA-3B44-4F6D-87F2-95125FB2FEE4",
+              "name": "Name",
+              "isCollection": "false"
+            },
+            "typeRef": "string"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_856BA8FA-EF7B-4DF9-A1EE-E28263CE9955",
+            "name": "Age",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_856BA8FA-EF7B-4DF9-A1EE-E28263CE9955",
+              "name": "Age",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_FDC2CE03-D465-47C2-A311-98944E8CC23F",
+            "name": "State",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_FDC2CE03-D465-47C2-A311-98944E8CC23F",
+              "name": "State",
+              "isCollection": "false"
+            },
+            "typeRef": "string"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_D6FD34C4-00DC-4C79-B1BF-BBCF6FC9B6D7",
+            "name": "City",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_D6FD34C4-00DC-4C79-B1BF-BBCF6FC9B6D7",
+              "name": "City",
+              "isCollection": "false"
+            },
+            "typeRef": "string"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_7110FE7E-1A38-4C39-B0EB-AEEF06BA37F4",
+            "name": "Points",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_7110FE7E-1A38-4C39-B0EB-AEEF06BA37F4",
+              "name": "Points",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          }
+        ]
+      },
+      {
+        "TYPE_NAME": "dmn.TItemDefinition",
+        "id": "_40731093-0642-4588-9183-1660FC55053B",
+        "name": "tViolation",
+        "isCollection": false,
+        "otherAttributes": {
+          "id": "_40731093-0642-4588-9183-1660FC55053B",
+          "name": "tViolation",
+          "isCollection": "false"
+        },
+        "itemComponent": [
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_39E88D9F-AE53-47AD-B3DE-8AB38D4F50B3",
+            "name": "Code",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_39E88D9F-AE53-47AD-B3DE-8AB38D4F50B3",
+              "name": "Code",
+              "isCollection": "false"
+            },
+            "typeRef": "string"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_1648EA0A-2463-4B54-A12A-D743A3E3EE7B",
+            "name": "Date",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_1648EA0A-2463-4B54-A12A-D743A3E3EE7B",
+              "name": "Date",
+              "isCollection": "false"
+            },
+            "typeRef": "date"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_9F129EAA-4E71-4D99-B6D0-84EEC3AC43CC",
+            "name": "Type",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_9F129EAA-4E71-4D99-B6D0-84EEC3AC43CC",
+              "name": "Type",
+              "isCollection": "false"
+            },
+            "typeRef": "string",
+            "allowedValues": {
+              "TYPE_NAME": "dmn.TUnaryTests",
+              "id": "_626A8F9C-9DD1-44E0-9568-0F6F8F8BA228",
+              "otherAttributes": {
+                "{http://www.drools.org/kie/dmn/1.2}constraintType": "enumeration",
+                "id": "_626A8F9C-9DD1-44E0-9568-0F6F8F8BA228"
+              },
+              "text": "\"speed\", \"parking\", \"driving under the influence\""
+            }
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_DDD10D6E-BD38-4C79-9E2F-8155E3A4B438",
+            "name": "Speed Limit",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_DDD10D6E-BD38-4C79-9E2F-8155E3A4B438",
+              "name": "Speed Limit",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_229F80E4-2892-494C-B70D-683ABF2345F6",
+            "name": "Actual Speed",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_229F80E4-2892-494C-B70D-683ABF2345F6",
+              "name": "Actual Speed",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          }
+        ]
+      },
+      {
+        "TYPE_NAME": "dmn.TItemDefinition",
+        "id": "_2D4F30EE-21A6-4A78-A524-A5C238D433AE",
+        "name": "tFine",
+        "isCollection": false,
+        "otherAttributes": {
+          "id": "_2D4F30EE-21A6-4A78-A524-A5C238D433AE",
+          "name": "tFine",
+          "isCollection": "false"
+        },
+        "itemComponent": [
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_B9F70BC7-1995-4F51-B949-1AB65538B405",
+            "name": "Amount",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_B9F70BC7-1995-4F51-B949-1AB65538B405",
+              "name": "Amount",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          },
+          {
+            "TYPE_NAME": "dmn.TItemDefinition",
+            "id": "_F49085D6-8F08-4463-9A1A-EF6B57635DBD",
+            "name": "Points",
+            "isCollection": false,
+            "otherAttributes": {
+              "id": "_F49085D6-8F08-4463-9A1A-EF6B57635DBD",
+              "name": "Points",
+              "isCollection": "false"
+            },
+            "typeRef": "number"
+          }
+        ]
+      }
+    ],
+    "drgElement": [
+      {
+        "name": {
+          "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+          "localPart": "inputData",
+          "prefix": "dmn",
+          "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}inputData",
+          "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:inputData"
+        },
+        "value": {
+          "TYPE_NAME": "dmn.TInputData",
+          "id": "_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+          "name": "Violation",
+          "otherAttributes": {
+            "id": "_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+            "name": "Violation"
+          },
+          "variable": {
+            "TYPE_NAME": "dmn.TInformationItem",
+            "id": "_C16CF9B1-5FAB-48A0-95E0-5FCD661E0406",
+            "name": "Violation",
+            "typeRef": "tViolation",
+            "otherAttributes": {
+              "id": "_C16CF9B1-5FAB-48A0-95E0-5FCD661E0406",
+              "name": "Violation",
+              "typeRef": "tViolation"
+            }
+          }
+        }
+      },
+      {
+        "name": {
+          "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+          "localPart": "decision",
+          "prefix": "dmn",
+          "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}decision",
+          "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:decision"
+        },
+        "value": {
+          "TYPE_NAME": "dmn.TDecision",
+          "id": "_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+          "name": "Fine",
+          "otherAttributes": {
+            "id": "_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+            "name": "Fine"
+          },
+          "variable": {
+            "TYPE_NAME": "dmn.TInformationItem",
+            "id": "_8C1EAC83-F251-4D94-8A9E-B03ACF6849CD",
+            "name": "Fine",
+            "typeRef": "tFine",
+            "otherAttributes": {
+              "id": "_8C1EAC83-F251-4D94-8A9E-B03ACF6849CD",
+              "name": "Fine",
+              "typeRef": "tFine"
+            }
+          },
+          "informationRequirement": [
+            {
+              "TYPE_NAME": "dmn.TInformationRequirement",
+              "id": "_800A3BBB-90A3-4D9D-BA5E-A311DED0134F",
+              "otherAttributes": {
+                "id": "_800A3BBB-90A3-4D9D-BA5E-A311DED0134F"
+              },
+              "requiredInput": {
+                "TYPE_NAME": "dmn.TDMNElementReference",
+                "href": "#_1929CBD5-40E0-442D-B909-49CEDE0101DC"
+              }
+            }
+          ],
+          "expression": {
+            "name": {
+              "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+              "localPart": "decisionTable",
+              "prefix": "dmn",
+              "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}decisionTable",
+              "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:decisionTable"
+            },
+            "value": {
+              "TYPE_NAME": "dmn.TDecisionTable",
+              "id": "_C8F7F579-E06C-4A2F-8485-65FAFAC3FE6A",
+              "hitPolicy": "UNIQUE",
+              "preferredOrientation": "Rule-as-Row",
+              "otherAttributes": {
+                "id": "_C8F7F579-E06C-4A2F-8485-65FAFAC3FE6A",
+                "hitPolicy": "UNIQUE",
+                "preferredOrientation": "Rule-as-Row"
+              },
+              "input": [
+                {
+                  "TYPE_NAME": "dmn.TInputClause",
+                  "id": "_B53A6F0D-F72C-41EF-96B3-F31269AC0FED",
+                  "otherAttributes": {
+                    "id": "_B53A6F0D-F72C-41EF-96B3-F31269AC0FED"
+                  },
+                  "inputExpression": {
+                    "TYPE_NAME": "dmn.TLiteralExpression",
+                    "id": "_974C8D01-728F-4CE5-8C69-BE884125B859",
+                    "typeRef": "string",
+                    "otherAttributes": {
+                      "id": "_974C8D01-728F-4CE5-8C69-BE884125B859",
+                      "typeRef": "string"
+                    },
+                    "text": "Violation.Type"
+                  }
+                },
+                {
+                  "TYPE_NAME": "dmn.TInputClause",
+                  "id": "_D5319F80-1C59-4736-AF2D-D29DE6B7E76D",
+                  "otherAttributes": {
+                    "id": "_D5319F80-1C59-4736-AF2D-D29DE6B7E76D"
+                  },
+                  "inputExpression": {
+                    "TYPE_NAME": "dmn.TLiteralExpression",
+                    "id": "_3FEB4DE3-90C6-438E-99BF-9BB1BF5B078A",
+                    "typeRef": "number",
+                    "otherAttributes": {
+                      "id": "_3FEB4DE3-90C6-438E-99BF-9BB1BF5B078A",
+                      "typeRef": "number"
+                    },
+                    "text": "Violation.Actual Speed - Violation.Speed Limit"
+                  }
+                }
+              ],
+              "output": [
+                {
+                  "TYPE_NAME": "dmn.TOutputClause",
+                  "id": "_9012031F-9C01-44E5-8CD2-E6704D594504",
+                  "name": "Amount",
+                  "typeRef": "number",
+                  "otherAttributes": {
+                    "id": "_9012031F-9C01-44E5-8CD2-E6704D594504",
+                    "name": "Amount",
+                    "typeRef": "number"
+                  }
+                },
+                {
+                  "TYPE_NAME": "dmn.TOutputClause",
+                  "id": "_7CAC8240-E1A5-4FEB-A0D4-B8613F0DE54B",
+                  "name": "Points",
+                  "typeRef": "number",
+                  "otherAttributes": {
+                    "id": "_7CAC8240-E1A5-4FEB-A0D4-B8613F0DE54B",
+                    "name": "Points",
+                    "typeRef": "number"
+                  }
+                }
+              ],
+              "rule": [
+                {
+                  "TYPE_NAME": "dmn.TDecisionRule",
+                  "id": "_424A80AE-916F-4451-9B6B-71557F7EC65A",
+                  "otherAttributes": {
+                    "id": "_424A80AE-916F-4451-9B6B-71557F7EC65A"
+                  },
+                  "inputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_EDA4F336-AA28-4F5F-ADFC-401E6DCC8D35",
+                      "otherAttributes": {
+                        "id": "_EDA4F336-AA28-4F5F-ADFC-401E6DCC8D35"
+                      },
+                      "text": "\"speed\""
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_246AAB08-A945-4599-9220-7C24B6716FDD",
+                      "otherAttributes": {
+                        "id": "_246AAB08-A945-4599-9220-7C24B6716FDD"
+                      },
+                      "text": "[10..30)"
+                    }
+                  ],
+                  "outputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_E49345EE-51D3-47C7-B658-3607E723FF37",
+                      "otherAttributes": {
+                        "id": "_E49345EE-51D3-47C7-B658-3607E723FF37"
+                      },
+                      "text": "500"
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_1D56F3CB-6BAE-4415-940F-00F37121813D",
+                      "otherAttributes": {
+                        "id": "_1D56F3CB-6BAE-4415-940F-00F37121813D"
+                      },
+                      "text": "3"
+                    }
+                  ]
+                },
+                {
+                  "TYPE_NAME": "dmn.TDecisionRule",
+                  "id": "_B1ECE6A9-6B82-4A85-A7CA-5F96CDB0DCB6",
+                  "otherAttributes": {
+                    "id": "_B1ECE6A9-6B82-4A85-A7CA-5F96CDB0DCB6"
+                  },
+                  "inputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_2390F686-65CF-40FF-BF9A-72DFBAEBACAC",
+                      "otherAttributes": {
+                        "id": "_2390F686-65CF-40FF-BF9A-72DFBAEBACAC"
+                      },
+                      "text": "\"speed\""
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_8CEBE4D5-DBEF-46EF-BD95-7B96148B6D8A",
+                      "otherAttributes": {
+                        "id": "_8CEBE4D5-DBEF-46EF-BD95-7B96148B6D8A"
+                      },
+                      "text": ">= 30"
+                    }
+                  ],
+                  "outputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_5FCC56B7-6BAA-4B09-AC61-7EB9D4CD58C3",
+                      "otherAttributes": {
+                        "id": "_5FCC56B7-6BAA-4B09-AC61-7EB9D4CD58C3"
+                      },
+                      "text": "1000"
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_79FF8FDD-3299-4DFD-AA14-D2022504BDAD",
+                      "otherAttributes": {
+                        "id": "_79FF8FDD-3299-4DFD-AA14-D2022504BDAD"
+                      },
+                      "text": "7"
+                    }
+                  ]
+                },
+                {
+                  "TYPE_NAME": "dmn.TDecisionRule",
+                  "id": "_8FC7068C-A3FD-44D9-AC2B-69C160A12E5D",
+                  "otherAttributes": {
+                    "id": "_8FC7068C-A3FD-44D9-AC2B-69C160A12E5D"
+                  },
+                  "inputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_02EEE8A9-1AD7-4708-8EC8-9B4177B05167",
+                      "otherAttributes": {
+                        "id": "_02EEE8A9-1AD7-4708-8EC8-9B4177B05167"
+                      },
+                      "text": "\"parking\""
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_A5141FF4-8D63-49DB-8979-3B64A3BD9A82",
+                      "otherAttributes": {
+                        "id": "_A5141FF4-8D63-49DB-8979-3B64A3BD9A82"
+                      },
+                      "text": "-"
+                    }
+                  ],
+                  "outputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_EFDA632D-113D-46C9-94B8-78E9F9770CA4",
+                      "otherAttributes": {
+                        "id": "_EFDA632D-113D-46C9-94B8-78E9F9770CA4"
+                      },
+                      "text": "100"
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_05F86973-52CE-4C9D-B785-47B6340D10FD",
+                      "otherAttributes": {
+                        "id": "_05F86973-52CE-4C9D-B785-47B6340D10FD"
+                      },
+                      "text": "1"
+                    }
+                  ]
+                },
+                {
+                  "TYPE_NAME": "dmn.TDecisionRule",
+                  "id": "_A742DF2B-DC91-4166-9773-6EF86A45A625",
+                  "otherAttributes": {
+                    "id": "_A742DF2B-DC91-4166-9773-6EF86A45A625"
+                  },
+                  "inputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_F5B5AE87-D9E6-4142-B01D-D79D4BA49EEE",
+                      "otherAttributes": {
+                        "id": "_F5B5AE87-D9E6-4142-B01D-D79D4BA49EEE"
+                      },
+                      "text": "\"driving under the influence\""
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TUnaryTests",
+                      "id": "_BD2A43F5-46D8-436A-B8A1-D98747C836B1",
+                      "otherAttributes": {
+                        "id": "_BD2A43F5-46D8-436A-B8A1-D98747C836B1"
+                      },
+                      "text": "-"
+                    }
+                  ],
+                  "outputEntry": [
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_ECAF3378-46B6-4F40-B95A-E90DB700BF7D",
+                      "otherAttributes": {
+                        "id": "_ECAF3378-46B6-4F40-B95A-E90DB700BF7D"
+                      },
+                      "text": "1000"
+                    },
+                    {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_F0016A9C-D1D0-472A-9FB3-ABE77AD15F7D",
+                      "otherAttributes": {
+                        "id": "_F0016A9C-D1D0-472A-9FB3-ABE77AD15F7D"
+                      },
+                      "text": "5"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": {
+          "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+          "localPart": "inputData",
+          "prefix": "dmn",
+          "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}inputData",
+          "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:inputData"
+        },
+        "value": {
+          "TYPE_NAME": "dmn.TInputData",
+          "id": "_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+          "name": "Driver",
+          "otherAttributes": {
+            "id": "_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+            "name": "Driver"
+          },
+          "variable": {
+            "TYPE_NAME": "dmn.TInformationItem",
+            "id": "_A80F16DF-0DB4-43A2-B041-32900B1A3F3D",
+            "name": "Driver",
+            "typeRef": "tDriver",
+            "otherAttributes": {
+              "id": "_A80F16DF-0DB4-43A2-B041-32900B1A3F3D",
+              "name": "Driver",
+              "typeRef": "tDriver"
+            }
+          }
+        }
+      },
+      {
+        "name": {
+          "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+          "localPart": "decision",
+          "prefix": "dmn",
+          "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}decision",
+          "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:decision"
+        },
+        "value": {
+          "TYPE_NAME": "dmn.TDecision",
+          "id": "_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+          "name": "Should the driver be suspended?",
+          "otherAttributes": {
+            "id": "_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+            "name": "Should the driver be suspended?"
+          },
+          "question": "Should the driver be suspended due to points on his license?",
+          "allowedAnswers": "\"Yes\", \"No\"",
+          "variable": {
+            "TYPE_NAME": "dmn.TInformationItem",
+            "id": "_40387B66-5D00-48C8-BB90-E83EE3332C72",
+            "name": "Should the driver be suspended?",
+            "typeRef": "string",
+            "otherAttributes": {
+              "id": "_40387B66-5D00-48C8-BB90-E83EE3332C72",
+              "name": "Should the driver be suspended?",
+              "typeRef": "string"
+            }
+          },
+          "informationRequirement": [
+            {
+              "TYPE_NAME": "dmn.TInformationRequirement",
+              "id": "_982211B1-5246-49CD-BE85-3211F71253CF",
+              "otherAttributes": {
+                "id": "_982211B1-5246-49CD-BE85-3211F71253CF"
+              },
+              "requiredInput": {
+                "TYPE_NAME": "dmn.TDMNElementReference",
+                "href": "#_1F9350D7-146D-46F1-85D8-15B5B68AF22A"
+              }
+            },
+            {
+              "TYPE_NAME": "dmn.TInformationRequirement",
+              "id": "_AEC4AA5F-50C3-4FED-A0C2-261F90290731",
+              "otherAttributes": {
+                "id": "_AEC4AA5F-50C3-4FED-A0C2-261F90290731"
+              },
+              "requiredDecision": {
+                "TYPE_NAME": "dmn.TDMNElementReference",
+                "href": "#_4055D956-1C47-479C-B3F4-BAEB61F1C929"
+              }
+            }
+          ],
+          "expression": {
+            "name": {
+              "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+              "localPart": "context",
+              "prefix": "dmn",
+              "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}context",
+              "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:context"
+            },
+            "value": {
+              "TYPE_NAME": "dmn.TContext",
+              "id": "_F39732F1-0AA7-468F-86C4-DCC07E6F81CF",
+              "otherAttributes": {
+                "id": "_F39732F1-0AA7-468F-86C4-DCC07E6F81CF"
+              },
+              "contextEntry": [
+                {
+                  "TYPE_NAME": "dmn.TContextEntry",
+                  "variable": {
+                    "TYPE_NAME": "dmn.TInformationItem",
+                    "id": "_09385E8D-68E0-4DFD-AAD8-141C15C96B71",
+                    "name": "Total Points",
+                    "typeRef": "number",
+                    "otherAttributes": {
+                      "id": "_09385E8D-68E0-4DFD-AAD8-141C15C96B71",
+                      "name": "Total Points",
+                      "typeRef": "number"
+                    }
+                  },
+                  "expression": {
+                    "name": {
+                      "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+                      "localPart": "literalExpression",
+                      "prefix": "dmn",
+                      "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}literalExpression",
+                      "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:literalExpression"
+                    },
+                    "value": {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_F1BEBF16-033F-4A25-9523-CAC23ACC5DFC",
+                      "otherAttributes": {
+                        "id": "_F1BEBF16-033F-4A25-9523-CAC23ACC5DFC"
+                      },
+                      "text": "Driver.Points + Fine.Points"
+                    }
+                  }
+                },
+                {
+                  "TYPE_NAME": "dmn.TContextEntry",
+                  "expression": {
+                    "name": {
+                      "namespaceURI": "http://www.omg.org/spec/DMN/20180521/MODEL/",
+                      "localPart": "literalExpression",
+                      "prefix": "dmn",
+                      "key": "{http://www.omg.org/spec/DMN/20180521/MODEL/}literalExpression",
+                      "string": "{http://www.omg.org/spec/DMN/20180521/MODEL/}dmn:literalExpression"
+                    },
+                    "value": {
+                      "TYPE_NAME": "dmn.TLiteralExpression",
+                      "id": "_1929D813-B1C9-43C5-9497-CE5D8B2B040C",
+                      "otherAttributes": {
+                        "id": "_1929D813-B1C9-43C5-9497-CE5D8B2B040C"
+                      },
+                      "text": "if Total Points >= 20 then \"Yes\" else \"No\""
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "dmndi": {
+      "TYPE_NAME": "dmn.DMNDI",
+      "dmnDiagram": [
+        {
+          "TYPE_NAME": "dmn.DMNDiagram",
+          "extension": {
+            "TYPE_NAME": "dmn.DiagramElement.Extension",
+            "any": [
+              {}
+            ]
+          },
+          "dmnDiagramElement": [
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNShape",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNShape",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNShape"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNShape",
+                "id": "dmnshape-_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_1929CBD5-40E0-442D-B909-49CEDE0101DC"
+                },
+                "isCollapsed": false,
+                "otherAttributes": {
+                  "id": "dmnshape-_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+                  "dmnElementRef": "_1929CBD5-40E0-442D-B909-49CEDE0101DC",
+                  "isCollapsed": "false"
+                },
+                "style": {
+                  "name": {
+                    "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                    "localPart": "DMNStyle",
+                    "prefix": "dmndi",
+                    "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNStyle",
+                    "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNStyle"
+                  },
+                  "value": {
+                    "TYPE_NAME": "dmn.DMNStyle",
+                    "fillColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 255,
+                      "green": 255,
+                      "blue": 255
+                    },
+                    "strokeColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    },
+                    "fontColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    }
+                  }
+                },
+                "bounds": {
+                  "TYPE_NAME": "dmn.Bounds",
+                  "x": 708,
+                  "y": 350,
+                  "width": 100,
+                  "height": 50
+                },
+                "dmnLabel": {
+                  "TYPE_NAME": "dmn.DMNLabel"
+                }
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNShape",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNShape",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNShape"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNShape",
+                "id": "dmnshape-_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_4055D956-1C47-479C-B3F4-BAEB61F1C929"
+                },
+                "isCollapsed": false,
+                "otherAttributes": {
+                  "id": "dmnshape-_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+                  "dmnElementRef": "_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+                  "isCollapsed": "false"
+                },
+                "style": {
+                  "name": {
+                    "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                    "localPart": "DMNStyle",
+                    "prefix": "dmndi",
+                    "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNStyle",
+                    "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNStyle"
+                  },
+                  "value": {
+                    "TYPE_NAME": "dmn.DMNStyle",
+                    "fillColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 255,
+                      "green": 255,
+                      "blue": 255
+                    },
+                    "strokeColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    },
+                    "fontColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    }
+                  }
+                },
+                "bounds": {
+                  "TYPE_NAME": "dmn.Bounds",
+                  "x": 709,
+                  "y": 210,
+                  "width": 100,
+                  "height": 50
+                },
+                "dmnLabel": {
+                  "TYPE_NAME": "dmn.DMNLabel"
+                }
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNShape",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNShape",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNShape"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNShape",
+                "id": "dmnshape-_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_1F9350D7-146D-46F1-85D8-15B5B68AF22A"
+                },
+                "isCollapsed": false,
+                "otherAttributes": {
+                  "id": "dmnshape-_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+                  "dmnElementRef": "_1F9350D7-146D-46F1-85D8-15B5B68AF22A",
+                  "isCollapsed": "false"
+                },
+                "style": {
+                  "name": {
+                    "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                    "localPart": "DMNStyle",
+                    "prefix": "dmndi",
+                    "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNStyle",
+                    "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNStyle"
+                  },
+                  "value": {
+                    "TYPE_NAME": "dmn.DMNStyle",
+                    "fillColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 255,
+                      "green": 255,
+                      "blue": 255
+                    },
+                    "strokeColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    },
+                    "fontColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    }
+                  }
+                },
+                "bounds": {
+                  "TYPE_NAME": "dmn.Bounds",
+                  "x": 369,
+                  "y": 344,
+                  "width": 100,
+                  "height": 50
+                },
+                "dmnLabel": {
+                  "TYPE_NAME": "dmn.DMNLabel"
+                }
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNShape",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNShape",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNShape"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNShape",
+                "id": "dmnshape-_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_8A408366-D8E9-4626-ABF3-5F69AA01F880"
+                },
+                "isCollapsed": false,
+                "otherAttributes": {
+                  "id": "dmnshape-_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+                  "dmnElementRef": "_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+                  "isCollapsed": "false"
+                },
+                "style": {
+                  "name": {
+                    "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                    "localPart": "DMNStyle",
+                    "prefix": "dmndi",
+                    "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNStyle",
+                    "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNStyle"
+                  },
+                  "value": {
+                    "TYPE_NAME": "dmn.DMNStyle",
+                    "fillColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 255,
+                      "green": 255,
+                      "blue": 255
+                    },
+                    "strokeColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    },
+                    "fontColor": {
+                      "TYPE_NAME": "dmn.Color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0
+                    }
+                  }
+                },
+                "bounds": {
+                  "TYPE_NAME": "dmn.Bounds",
+                  "x": 534,
+                  "y": 83,
+                  "width": 133,
+                  "height": 63
+                },
+                "dmnLabel": {
+                  "TYPE_NAME": "dmn.DMNLabel"
+                }
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNEdge",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNEdge",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNEdge"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNEdge",
+                "id": "dmnedge-_800A3BBB-90A3-4D9D-BA5E-A311DED0134F",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_800A3BBB-90A3-4D9D-BA5E-A311DED0134F",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_800A3BBB-90A3-4D9D-BA5E-A311DED0134F",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_800A3BBB-90A3-4D9D-BA5E-A311DED0134F"
+                },
+                "otherAttributes": {
+                  "id": "dmnedge-_800A3BBB-90A3-4D9D-BA5E-A311DED0134F",
+                  "dmnElementRef": "_800A3BBB-90A3-4D9D-BA5E-A311DED0134F"
+                },
+                "waypoint": [
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 758,
+                    "y": 375
+                  },
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 759,
+                    "y": 235
+                  }
+                ]
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNEdge",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNEdge",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNEdge"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNEdge",
+                "id": "dmnedge-_982211B1-5246-49CD-BE85-3211F71253CF",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_982211B1-5246-49CD-BE85-3211F71253CF",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_982211B1-5246-49CD-BE85-3211F71253CF",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_982211B1-5246-49CD-BE85-3211F71253CF"
+                },
+                "otherAttributes": {
+                  "id": "dmnedge-_982211B1-5246-49CD-BE85-3211F71253CF",
+                  "dmnElementRef": "_982211B1-5246-49CD-BE85-3211F71253CF"
+                },
+                "waypoint": [
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 419,
+                    "y": 369
+                  },
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 600.5,
+                    "y": 114.5
+                  }
+                ]
+              }
+            },
+            {
+              "name": {
+                "namespaceURI": "http://www.omg.org/spec/DMN/20180521/DMNDI/",
+                "localPart": "DMNEdge",
+                "prefix": "dmndi",
+                "key": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}DMNEdge",
+                "string": "{http://www.omg.org/spec/DMN/20180521/DMNDI/}dmndi:DMNEdge"
+              },
+              "value": {
+                "TYPE_NAME": "dmn.DMNEdge",
+                "id": "dmnedge-_AEC4AA5F-50C3-4FED-A0C2-261F90290731",
+                "dmnElementRef": {
+                  "namespaceURI": "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+                  "localPart": "_AEC4AA5F-50C3-4FED-A0C2-261F90290731",
+                  "prefix": "",
+                  "key": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_AEC4AA5F-50C3-4FED-A0C2-261F90290731",
+                  "string": "{https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF}_AEC4AA5F-50C3-4FED-A0C2-261F90290731"
+                },
+                "otherAttributes": {
+                  "id": "dmnedge-_AEC4AA5F-50C3-4FED-A0C2-261F90290731",
+                  "dmnElementRef": "_AEC4AA5F-50C3-4FED-A0C2-261F90290731"
+                },
+                "waypoint": [
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 759,
+                    "y": 235
+                  },
+                  {
+                    "TYPE_NAME": "dmn.Point",
+                    "x": 600.5,
+                    "y": 114.5
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

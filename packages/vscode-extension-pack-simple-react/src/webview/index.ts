@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
+// import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
+import * as MicroEditorEnvelope from "../../../microeditor-envelope";
 import { SimpleReactEditorsFactory } from "./SimpleReactEditorsFactory";
 
 declare global {

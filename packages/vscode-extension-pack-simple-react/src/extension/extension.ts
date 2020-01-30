@@ -16,7 +16,8 @@
 
 import * as vscode from "vscode";
 import { SimpleReactEditorsRouter } from "./SimpleReactEditorsRouter";
-import * as KogitoVsCode from "@kogito-tooling/vscode-extension";
+// import * as KogitoVsCode from "@kogito-tooling/vscode-extension";
+import * as KogitoVsCode from "../../../vscode-extension";
 
 export function activate(context: vscode.ExtensionContext) {
   console.info("Extension is alive.");

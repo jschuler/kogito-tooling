@@ -118,7 +118,7 @@ class ReactReadonlyEditor extends React.Component<Props, State> {
   public getContent() {
     console.log(`ReactReadonlyEditor getContent`);
     console.log(this.state.content); // JSON object
-    const asd = setSceSimFromJson(this.state.content);
+    const asd = setSceSimFromJson(JSON.parse(this.state.content));
     console.log(asd);
     return this.setContent(asd).then(() => this.state.content);
   }

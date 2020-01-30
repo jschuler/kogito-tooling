@@ -16,6 +16,7 @@
 
 import { GwtAppFormerApi, GwtEditorWrapperFactory } from "@kogito-tooling/gwt-editors";
 import * as MicroEditorEnvelope from "@kogito-tooling/microeditor-envelope";
+import { SimpleReactEditorsFactory } from "./SimpleReactEditorsFactory";
 
 declare global {
   export const acquireVsCodeApi: any;
@@ -27,5 +28,6 @@ gwtAppFormerApi.setClientSideOnly(true);
 MicroEditorEnvelope.init({
   container: document.getElementById("envelope-app")!,
   busApi: acquireVsCodeApi(),
-  editorFactory: new GwtEditorWrapperFactory(gwtAppFormerApi)
+  // editorFactory: new GwtEditorWrapperFactory(gwtAppFormerApi)
+  editorFactory: new SimpleReactEditorsFactory()
 });
